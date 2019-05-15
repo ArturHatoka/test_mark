@@ -24,4 +24,9 @@ section{
   display: flex;
   width: 100%;
 }
+main{
+  height: 536px;
+  background: url("../img/back.png");
+}
 @import "header";
+@import "mobile";
