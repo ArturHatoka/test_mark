@@ -1,0 +1,27 @@
+@import "mixin";
+@import "keys";
+*, *:after, *:before{
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  z-index: 1;
+  background: rgb(255, 255, 255);
+}
+body, header, main, footer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+section{
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+@import "header";

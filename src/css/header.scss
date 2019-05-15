@@ -1,0 +1,39 @@
+.header{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 243px;
+  align-items: center;
+  margin-left: 89px;
+  &-logo{
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    & img{
+      position: relative;
+      display: flex;
+      width: 71px;
+      height: 90px;
+    }
+  }
+  &__desc{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 50px;
+    margin-left: 23px;
+    &-title{
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 27px;
+    }
+    &-subtitle{
+      color: #6e7f95;
+    }
+  }
+}
