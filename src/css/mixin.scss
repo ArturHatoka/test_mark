@@ -3,3 +3,6 @@ $red_color:#c32118;
 $blue_color:#59b4e6;
 $green_color:#95c11b;
 $yellow_color:#fcd300;
+@mixin lazy_load{
+  animation: lazy_load 1.5s forwards;
+}

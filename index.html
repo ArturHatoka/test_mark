@@ -26,7 +26,8 @@
 </header>
 <main>
     <section class="slider">
-        <div class="slider__box red blue green yellow">
+        <div data-speed="4" id="video" class="slider__box red one">
+            <video class="slider__box-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" src="src/video/tornado.mov"></video>
             <div class="slider__box__head">
                 <span class="slider__box__head-title big">Торнадо</span>
                 <span class="slider__box__head-beerka red">Новинка</span>
@@ -36,8 +37,56 @@
                 <span class="slider__box__body-desc">Выбери название из 5 000 женских имен. (Услуга выбора имени платная — 100 Р)</span>
             </div>
         </div>
+        <div data-speed="4" class="slider__box blue two">
+            <div class="slider__box__head">
+                <span class="slider__box__head-title small">Солнечная погода на 9 мая</span>
+                <span class="slider__box__head-beerka blue">Хит</span>
+            </div>
+            <div class="slider__box__body">
+                <span class="slider__box__body-desc">Не нужно разгонять облака. Заказывайте погоду в приложении Петуч Уетар Говермент.</span>
+            </div>
+        </div>
+        <div data-speed="6" class="slider__box green three">
+            <div class="slider__box__head">
+                <span class="slider__box__head-title small">Погода на мероприятие</span>
+                <span class="slider__box__head-beerka green">Шок цена</span>
+            </div>
+            <div class="slider__box__body">
+                <span class="slider__box__body-desc">Выберите понравившуюся погоду в любой день. <br> Даже во вторник</span>
+            </div>
+        </div>
+        <div data-speed="2" class="slider__box yellow four">
+            <div class="slider__box__head">
+                <span class="slider__box__head-title big">Потная жара</span>
+                <span class="slider__box__head-beerka yellow">Ликвидация</span>
+            </div>
+            <div class="slider__box__body">
+                <span class="slider__box__body-desc">Солнечная погода с температурой воздуха −65…+43 °С. <br> Солнечные очки в подарок при заказе от 2-х дней</span>
+            </div>
+        </div>
+        <div data-speed="4" class="slider__box blue five">
+            <div class="slider__box__head">
+                <span class="slider__box__head-title big">Осенний дрист</span>
+            </div>
+            <div class="slider__box__body">
+                <span class="slider__box__body-desc">Мммм…</span>
+            </div>
+        </div>
+        <div data-speed="5" class="slider__box yellow six">
+            <div class="slider__box__head">
+                <span class="slider__box__head-title small">Дождь с грозой</span>
+                <span class="slider__box__head-beerka yellow">Только летом</span>
+            </div>
+            <div class="slider__box__body">
+                <span class="slider__box__body-desc">Почуствуй себя Зевсом с приложением Петуч Уетар. <br> Идеальный подарок</span>
+            </div>
+        </div>
     </section>
+    <form class="slider__zipper" name="form" id="myform">
+        <input class="slider__zipper-thumb" id="x" type="range" min="0" max="150" step="1">
+    </form>
 </main>
+<script src="src/js/jquery_v3.1.0.min.js"></script>
 <script src="src/js/script.js"></script>
 </body>
 </html>
