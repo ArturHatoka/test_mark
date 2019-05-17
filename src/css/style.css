@@ -28,7 +28,6 @@ section {
   width: 100%; }
 
 main {
-  height: 536px;
   background: url("../img/back.png"); }
 
 .header {
@@ -70,7 +69,17 @@ main {
   display: flex;
   width: 100%;
   height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 100px; }
+  .slider__row {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex; }
   .slider__box {
     position: absolute;
     width: 532px;
@@ -79,7 +88,8 @@ main {
     flex-direction: column;
     border-top: 7px solid rgba(0, 0, 0, 0);
     justify-content: space-around;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: .4s !important; }
     .slider__box.red {
       border-color: #c32118; }
     .slider__box.blue {
@@ -88,36 +98,30 @@ main {
       border-color: #95c11b; }
     .slider__box.yellow {
       border-color: #fcd300; }
-    .slider__box.one {
-      top: 50px;
-      left: 30%; }
-    .slider__box.two {
-      top: 20px;
-      right: -10%; }
-    .slider__box.three {
-      top: 200px;
-      right: 15%; }
-    .slider__box.four {
-      bottom: 50px;
-      right: -5%; }
-    .slider__box.five {
-      bottom: 100px;
-      left: 10%; }
-    .slider__box.six {
-      top: 150px;
-      left: -10%; }
     .slider__box-video {
       position: absolute;
       width: 532px;
       display: none;
-      transition: 1s;
+      transition: .4s;
       top: -200px;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      z-index: 99; }
+    .slider__box-details {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 100;
+      opacity: 0;
+      color: white;
+      text-decoration: none; }
+      .slider__box-details.active {
+        opacity: 1; }
     .slider__box__head {
       position: relative;
       display: flex;
-      width: 100%; }
+      width: 100%;
+      z-index: 100; }
       .slider__box__head-title {
         width: max-content;
         height: max-content;
@@ -151,10 +155,22 @@ main {
     .slider__box__body {
       position: relative;
       display: flex;
-      width: 400px; }
+      width: 400px;
+      z-index: 100; }
       .slider__box__body-desc {
         color: #6f8fb9;
         line-height: 21px; }
+        .slider__box__body-desc.active {
+          color: white; }
+    .slider__box.active {
+      border-top: 0 solid rgba(0, 0, 0, 0);
+      z-index: 100;
+      padding: 7px 20px 60px;
+      width: calc(532px + 40px);
+      height: calc(120px + 60px);
+      transition: .3s !important;
+      color: white;
+      margin-left: -20px; }
   .slider__zipper {
     width: 95%; }
     .slider__zipper-thumb {

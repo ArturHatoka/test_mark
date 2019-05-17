@@ -4,6 +4,17 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  &__row{
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+  }
   &__box{
     position: absolute;
     width: 532px;
@@ -13,6 +24,7 @@
     border-top: 7px solid $empty_color;
     justify-content: space-around;
     overflow: hidden;
+    transition: .4s !important;
     &.red{
       border-color: $red_color;
     }
@@ -25,43 +37,33 @@
     &.yellow{
       border-color: $yellow_color;
     }
-    &.one{
-      top: 50px;
-      left: 30%;
-    }
-    &.two{
-      top: 20px;
-      right: -10%;
-    }
-    &.three{
-      top: 200px;
-      right: 15%;
-    }
-    &.four{
-      bottom: 50px;
-      right: -5%;
-    }
-    &.five{
-      bottom: 100px;
-      left: 10%;
-    }
-    &.six{
-      top: 150px;
-      left: -10%;
-    }
     &-video{
       position: absolute;
       width: 532px;
       display: none;
-      transition: 1s;
+      transition: .4s;
       top: -200px;
       left: 50%;
       transform: translateX(-50%);
+      z-index: 99;
+    }
+    &-details{
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 100;
+      opacity: 0;
+      color: white;
+      text-decoration: none;
+      &.active{
+        opacity: 1;
+      }
     }
     &__head{
       position: relative;
       display: flex;
       width: 100%;
+      z-index: 100;
       &-title{
         width: max-content;
         height: max-content;
@@ -106,10 +108,24 @@
       position: relative;
       display: flex;
       width: 400px;
+      z-index: 100;
       &-desc{
         color: #6f8fb9;
         line-height: 21px;
+        &.active{
+          color: white;
+        }
       }
+    }
+    &.active{
+      border-top: 0 solid $empty_color;
+      z-index: 100;
+      padding: 7px 20px 60px;
+      width: calc(532px + 40px);
+      height: calc(120px + 60px);
+      transition: .3s !important;
+      color: white;
+      margin-left: -20px;
     }
   }
   &__zipper{
@@ -162,7 +178,6 @@
         background-repeat: no-repeat;
         cursor: pointer;
       }
-
     }
   }
 }
