@@ -1,0 +1,42 @@
+@media screen and (max-width: 425px){
+  .header{
+    height: 122px;
+    padding-left: 25px;
+  }
+  .slider{
+    padding-bottom: 90px;
+    &__row {
+      height: 90px;
+    }
+    &-video{
+      width: 339px;
+    }
+    &__box{
+      width: 339px;
+      height: 90px;
+      &__head{
+        &-title{
+          &.big {
+            font-size: 1.4rem;
+          }
+          &.small{
+            font-size: 1.1rem;
+          }
+        }
+        &-beerka{
+          margin-top: 4px;
+          font-size: 0.7rem;
+        }
+      }
+      &.active {
+        width: calc(339px + 40px);
+        height: calc(80px + 60px);
+      }
+      &__body{
+        &-desc{
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -20,7 +20,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.video').hover(
         function () {
-            $(this).children('video').css("display", "flex").css("top", "-15px").css("width", "120%");
+            $(this).children('video').css("display", "flex").css("top", "-15px").css("width", "110%");
             $(this).addClass('active');
             $(this).find('.slider__box__body-desc').addClass('active');
             $(this).find('.slider__box-details').addClass('active');
